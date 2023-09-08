@@ -16,6 +16,7 @@ const colSettings = [
 
 const sheduleTable = {
   columns: [],
+  currentEvenWeek: {},
   getColumns() {
     return colSettings.reduce((acc, arr) => {
       arr.forEach((val) => acc.push(val));
@@ -23,15 +24,16 @@ const sheduleTable = {
     }, [])
   },
   fillTable(data) {
+    this.currentEvenWeek = this.getEvenWeekProperty();
     const table = document.getElementById(TABLE_ID);
     this.columns = this.getColumns();
-    const header = this.getHeader();
-    table.tHead.innerHTML = header;
+    const headerColumns = this.getHeader();
+    // table.tHead.innerHTML = header;
     [EVEN_NAME, UNEVEN_NAME].forEach((week, index) => {
-      const tbodyHtml = this.getBody(data, week);
+      const tbodyHtml = this.getBody({headerColumns, data, week});
       if (!table.tBodies[index]) {
         const tbody = document.createElement('tbody');
-        tbody.innerHTML = this.getBody(data, week);
+        tbody.innerHTML = tbodyHtml;
         table.appendChild(tbody);
       } else {
         table.tBodies[index].innerHTML = tbodyHtml;
@@ -40,20 +42,30 @@ const sheduleTable = {
   },
   getHeader() {
     const ths = this.columns.map(col => `<th>${col}</th>`);
-    return `<tr>${ths.join('')}</tr>`;
+    return `<tr class="text-center">${ths.join('')}</tr>`;
   },
-  getBody(data, week) {
-    const rows = data.map(subject => {
-      const row = this.getRow(subject, week);
+  getBody({headerColumns, data, week} = {}) {
+    const rows = data.map((subject, i) => {
+      const row = this.getRow(subject, week, i);
+      // const bg = (i % 2) ? ' class="bg-light"' : '';
       return `<tr>${row.join('')}</tr>`;
     });
-    return `<tr><td class="text-center fst-italic text-success" colspan="${this.columns.length}"><b>${week} неделя</b></td></tr>` + rows.join('');
+    let weekText = `${week} неделя`;
+    if (this.currentEvenWeek.name === week) {
+      weekText += ` (текущая ${this.currentEvenWeek.curWeekFrom} - ${this.currentEvenWeek.curWeekTo})`;
+    } else {
+      weekText += ` (${this.currentEvenWeek.nextWeekFrom} - ${this.currentEvenWeek.nextWeekTo})`;
+    }
+    const weekInfoRow = `<tr><td class="text-center fst-italic text-success" colspan="${this.columns.length}"><b>${weekText}</b></td></tr>`;
+    return weekInfoRow + headerColumns + rows.join('');
   },
-  getRow(subject, week) {
+  getRow(subject, week, i) {
     const cols = [];
     cols.push(subject.name);
     colSettings[1].forEach(() => cols.push(''));
-    cols.push(subject.teacher);
+    const {teacherHref, teacher} = subject;
+    const teacherHtml = teacherHref ? `<a target="_blank" href="${teacherHref}">${teacher}</a>` : teacher;
+    cols.push(teacherHtml);
     subject.shedule.forEach(cell => {
       const strictCellWeel = this.checkWeek(cell);
       if (strictCellWeel !== week) {
@@ -66,11 +78,11 @@ const sheduleTable = {
       }
       cols[cellIndex] += htmlCell;
     });
-
-    return cols.map(col => `<td>${col}</td>`);
+    const bgClass = !(i%2) ? ' bg-secondary bg-opacity-10' : '';
+    return cols.map(col => `<td class="align-middle${bgClass}">${col}</td>`);
   },
   getCell(cell) {
-    let htmlCell = `${cell.time} ${cell.type}<br>${cell.room}`;
+    let htmlCell = `${cell.time} ${cell.type}<br><span class="text-nowrap">${cell.room}</span>`;
     if (cell.color) {
       htmlCell = `<span style="color:${cell.color}">${htmlCell}</span>`;
     }
@@ -96,5 +108,33 @@ const sheduleTable = {
     }
     console.error('не определен день "урока": ', cell);
     return 1;
+  },
+  getEvenWeekProperty() {
+    const begin = new Date("2023-08-28"); // 28 вгуста 2023 - первая (нечетная) неделя началась с 4 сентября
+    const time = new Date();
+    // сколько полных недель прошло
+    const weekMs = this.getWeeksMsByDays(7);
+    const weeks = Math.floor((time.getTime() - begin.getTime()) / weekMs);
+    const isEven = Boolean(weeks % 2);
+    return {
+      name: isEven ? EVEN_NAME : UNEVEN_NAME,
+      curWeekFrom: this.getTextDate(new Date(begin.getTime() + (weeks * weekMs))),
+      curWeekTo: this.getTextDate(new Date(begin.getTime() + ((weeks + 1) * weekMs) - this.getWeeksMsByDays(1))),
+      nextWeekFrom: this.getTextDate(new Date(begin.getTime() + ((weeks + 1) * weekMs))),
+      nextWeekTo: this.getTextDate(new Date(begin.getTime() + ((weeks + 2) * weekMs) - this.getWeeksMsByDays(1))),
+    };
+  },
+  getTextDate(date) {
+    return `${this.getTwuSimbols(date.getDate())}.${this.getTwuSimbols(date.getMonth()+1)}.${date.getFullYear()}`;
+  },
+  getTwuSimbols(num) {
+    const text = num.toString();
+    if (text.length === 1) {
+      return `0${text}`;
+    }
+    return text;
+  },
+  getWeeksMsByDays(days) {
+    return days * 24 * 60 * 60 * 1000;
   }
 }

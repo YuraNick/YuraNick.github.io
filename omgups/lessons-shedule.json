@@ -1,7 +1,8 @@
 [
   {
     "name": "Иностранный язык (проф. уровень)",
-    "teacher": "Дрофа С.Ю.",
+    "teacher": "Дрофа Светлана Юрьевна",
+    "teacherHref": "https://www.omgups.ru/university/employees/148/",
     "shedule": [
       {
         "week": "нч",
@@ -15,7 +16,8 @@
   },
   {
     "name": "Управление IT-проектами",
-    "teacher": "Елизаров Д.А.",
+    "teacher": "Елизаров Дмитрий Александрович",
+    "teacherHref": "https://www.omgups.ru/university/employees/7/",
     "shedule": [
       {
         "week": "нч",
@@ -37,7 +39,8 @@
   },
   {
     "name": "Теория и практика научно-исследовательской работы",
-    "teacher": "Каштанов А.Л.",
+    "teacher": "Каштанов Алексей Леонидович",
+    "teacherHref": "https://www.omgups.ru/university/employees/368/",
     "shedule": [
       {
         "week": "нч",
@@ -59,7 +62,8 @@
   },
   { 
     "name": "Психология личности и деловая этика",
-    "teacher": "Росляков А.Е.",
+    "teacher": "Росляков Алексей Евгеньевич",
+    "teacherHref": "https://www.promgups.ru/kafedra/?page_id=16",
     "shedule": [
       {
         "week": "нч",
@@ -82,6 +86,7 @@
   { 
     "name": "Логика и методология науки",
     "teacher": "Хлебникова Ольга Владимировна",
+    "teacherHref": "https://www.omgups.ru/university/employees/82/",
     "shedule": [
       {
         "week": "нч",

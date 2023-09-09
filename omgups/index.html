@@ -9,16 +9,106 @@
 </head>
 <body data-bs-theme="light">
   <h4 class="text-center">Информация для 73ЦЭ</h4>
-  <table id="lessons-shedule" class="table table-sm caption-top table-hover table-bordered border-primary table-striped-1">
-    <caption>Расписание</caption>
-    <!-- таблица заполняется через JS -->
-    <thead></thead>
-    <tbody></tbody>
-  </table>
+  <div>
+    <table id="lessons-shedule" class="table table-sm caption-top table-hover table-bordered border-primary table-striped-1">
+      <caption>Расписание</caption>
+      <!-- таблица заполняется через JS -->
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div id="login-section">
+    <input type="password">
+    <button type="submit">Показать скрытые поля</button>
+    <span class="text-danger"></span>
+  </div>
+  <div>
+    <h4>Кафедра АиСУ (АВТОМАТИКА И СИСТЕМЫ УПРАВЛЕНИЯ)</h4>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <a target="_blank" href="https://www.omgups.ru/university/employees/23/">
+          Малютин Андрей Геннадьевич</a>, зав кафедрой
+      </li>
+      <li class="list-group-item" id="aisu-group-text">группа в ВК АиСУ (Малютин А.Г.) и студенты</li>
+      <li class="list-group-item">Елизаров Дмитрий Александрович, Управление IT-проектами</li>
+      <li class="list-group-item">Каштанов Алексей Леонидович, Теория и практика научно-исследовательской работы</li>
+      <li class="list-group-item"><a target="_blank" href="https://psv4.userapi.com/c909618/u1027461/docs/d19/a72e629da465/Magistratura_O-ZO_KUG_2023-2024.pdf?extra=3JzklgmlB5-oXywk6PxKcIoiyL8Cq2LX7GTo6xkNrSh-IkPpLs14yExRJwcQPQ7lEqRjzmgan5wP-fqU1TI5nM8b8RJ-niLRKsVwMKeNQSgIuyi_d0DTMa-42rsLb6T7GWZJf3b_2pqNnXH7bvo">
+        Календарный учебный график (КУГ) для программы магистратуры</a> (первый наш)
+      </li>
+      <li class="list-group-item"><a target="_blank" href="https://disk.yandex.ru/i/AEEJ0TPhPfPwDA">Учебный план (УП)</a></li>
+      <li class="list-group-item">Малютин: Обратите внимание на условные обозначения, периоды начала занятий, аттестаций и практик. КУГ и УП можно найти на сайте <a target="_blank" href="https://www.omgups.ru/sveden/education/informatsiya-op/">тут</a></li>
+    </ul>
+    
+    <h4>Дисциплины</h4>
+    <ul class="list-group">
+      <li class="list-group-item active" aria-current="true">
+        Управление IT-проектами
+      </li>
+      <li class="list-group-item">Елизаров Дмитрий Александрович, кафедра АиСУ</li>
+      <li class="list-group-item">1-й семестр: 5 лабораторных работ, сдавать ему в ВК в электронном виде</li>
+      <li class="list-group-item">2-й семестр: придумать проект, сдавать его полную или только плановую реализацию</li>
+      <li class="list-group-item" id="it-managment-text">ссылка на гугл диск на два первых семетра: лекции и лаботорные</li>
+    </ul>
+    <ul class="list-group">
+      <li class="list-group-item active" aria-current="true">
+        Теория и практика научно-исследовательской работы
+      </li>
+      <li class="list-group-item">Каштанов Алексей Леонидович, кафедра АиСУ</li>
+      <li class="list-group-item">Материалы будут в группе на 
+        <a target="_blank" href="https://portal.omgups.ru">портале bitrix ОмГУПС</a>,
+        если нет пароля, его нужно сбросить при помощи той своей почты, что указывали при поступлении
+      </li>
+      <li class="list-group-item">
+        Алексей Леонидович просил поставить "+" после подключения к группе. Когда все студенты будут в группе, 
+        он выложит материал, иначе оследующие подключившиеся студенты могут не получить доступа к материалам
+      </li>
+    </ul>
+    <ul class="list-group">
+      <li class="list-group-item active" aria-current="true">
+        Логика и методология науки
+      </li>
+      <li class="list-group-item">Хлебникова Ольга Владимировна, профессор кафедры ИФК (ИСТОРИЯ, ФИЛОСОФИЯ И КУЛЬТУРОЛОГИЯ)</li>
+      <li class="list-group-item" id="ifk-group-text">Группа в ВК от преподавателя</li>
+      <li class="list-group-item" id="ifk-methodical-text">
+        В этой группе есть пост с ссылкой на лекции, учебники и темы семинаров
+      </li>
+      <li class="list-group-item">
+        В этой группе есть пост с ссылкой на
+        <span id="ifk-audio-text">
+          аудиозаписями занятий по предмету, сделанными в прошлые года
+        </span>
+        (для учащихся, которые не могут посещать занятия лично)
+      </li>
+    </ul>
+    <ul class="list-group">
+      <li class="list-group-item active" aria-current="true">
+        Психология личности и деловая этика
+      </li>
+      <li class="list-group-item">
+        <a target="_blank" href="https://www.omgups.ru/university/employees/181/">Росляков Алексей Евгеньевич</a>, доцент кафедры СОСТ ("Связи с общественностью, сервис и туризм")
+      </li>
+      <li class="list-group-item"><a target="_blank" href="https://www.promgups.ru/kafedra/?page_id=9499">Материалы к дисциплине</a></li>
+      <li class="list-group-item">
+        Необходимо сдать один реферат из предложенных, присутствовать на семинарах
+      </li>
+    </ul>
+    <ul class="list-group">
+      <li class="list-group-item active" aria-current="true">
+        Иностранный язык (проф. уровень)
+      </li>
+      <li class="list-group-item">
+        <a target="_blank" href="https://www.omgups.ru/university/employees/148/">Дрофа Светлана Юрьевна</a>, доцент кафедры РИЯ (РУССКИЙ И ИНОСТРАННЫЕ ЯЗЫКИ)
+      </li>
+      <li class="list-group-item" id="english-text">
+        Лекции проходят в zoom
+      </li>
+    </ul>
+  </div>
   <script>
     const MY_SCRIPTS = [
       './script/get-json.js',
       './script/lessons-shedule.js',
+      './script/login.js',
     ];
   </script>
   <script defer src="./script/scripts-loader.js"></script>

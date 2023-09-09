@@ -28,7 +28,6 @@ const sheduleTable = {
     const table = document.getElementById(TABLE_ID);
     this.columns = this.getColumns();
     const headerColumns = this.getHeader();
-    // table.tHead.innerHTML = header;
     [EVEN_NAME, UNEVEN_NAME].forEach((week, index) => {
       const tbodyHtml = this.getBody({headerColumns, data, week});
       if (!table.tBodies[index]) {
@@ -56,7 +55,7 @@ const sheduleTable = {
     } else {
       weekText += ` (${this.currentEvenWeek.nextWeekFrom} - ${this.currentEvenWeek.nextWeekTo})`;
     }
-    const weekInfoRow = `<tr><td class="text-center fst-italic text-success" colspan="${this.columns.length}"><b>${weekText}</b></td></tr>`;
+    const weekInfoRow = `<tr><td class="text-center fst-italic text-success fw-weight-bold" colspan="${this.columns.length}"><b>${weekText}</b></td></tr>`;
     return weekInfoRow + headerColumns + rows.join('');
   },
   getRow(subject, week, i) {

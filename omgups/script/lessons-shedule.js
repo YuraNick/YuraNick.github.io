@@ -1,5 +1,6 @@
 document.body.addEventListener("lessons-shedule-loaded", (event) => {
   sheduleTable.fillTable(event.detail);
+  document.querySelector('.spinner-border').remove();
 },{
   once: true,
 });

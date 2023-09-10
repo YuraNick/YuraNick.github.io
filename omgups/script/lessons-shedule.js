@@ -114,7 +114,7 @@ const sheduleTable = {
     const time = new Date();
     // сколько полных недель прошло
     const weekMs = this.getWeeksMsByDays(7);
-    const weeks = Math.floor((time.getTime() - begin.getTime()) / weekMs);
+    const weeks = Math.floor((time.getTime() - begin.getTime() - (begin.getTimezoneOffset() *60*1000)) / weekMs);
     const isEven = Boolean(weeks % 2);
     return {
       name: isEven ? EVEN_NAME : UNEVEN_NAME,

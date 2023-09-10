@@ -33,7 +33,8 @@
   document.title = title;
   const uri = BASE+path;
   const pdf = PDFObject.embed(uri, document.body, {
-  fallbackLink: "Этот браузер не поддерживает чтение pdf",
+    supportRedirect: true,
+    fallbackLink: `Этот браузер не поддерживает чтение pdf, вы можете перейти по <a href="${uri}">прямой ссылке на файл</a>`,
   });
 })();
 

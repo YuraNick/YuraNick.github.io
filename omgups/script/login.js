@@ -8,6 +8,9 @@
 Идентификатор конференции: 796 0121 2044<br>
 Код доступа: 7V8RHj
       `,
+    'english-homework-text': `нужно выполнить практическую работу до 9-15 октября, следующая встреча в zoom будет примерно после этих чисел<br>
+    потом будет еще одно задание, далее в декабре зачет
+    `,
     'aisu-group-text': `<a target="_blank" href="https://vk.me/join/AJQ1d4qEMykdLx0dc0LKWdID">группа в ВК АиСУ (Малютин А.Г.) и студенты</a>`,
     'it-managment-text': `<a target="_blank" href="https://drive.google.com/drive/folders/1zLYD3l4OX8QFLHkpClWkJax1hvaLgHVr">
 ссылка на гугл диск на два первых семетра: лекции и лаботорные</a>`,

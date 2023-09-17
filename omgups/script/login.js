@@ -11,15 +11,23 @@
     'english-homework-text': `нужно выполнить практическую работу до 9-15 октября, следующая встреча в zoom будет примерно после этих чисел<br>
     потом будет еще одно задание, далее в декабре зачет
     `,
+    'nir-email-text': `Al.kashtanov@mail.ru`,
+    'nir-lk1-text': `<a target="_blank" href="https://cloud.mail.ru/public/kbjw/YMsfsxUMw">Лекция No 1 (39:13)</a>`,
+    'nir-lk2-text': `<a target="_blank" href="https://cloud.mail.ru/public/Epq5/Uup3rjxCs">Лекция No 2 (31:27)</a>`,
+    'nir-lk3-text': `<a target="_blank" href="https://cloud.mail.ru/public/eu9x/qZRqMdYnK">Лекция No 3 (24:21)</a>`,
+    'nir-lb1-text': `<a target="_blank" href="https://cloud.mail.ru/public/Na2z/sS6FDJ4cv">Лабораторная работа No 1</a>`,
+    'nir-lb2-text': `<a target="_blank" href="https://cloud.mail.ru/public/xG9R/qFpfSnBbN">Лабораторная работа No 2</a>`,
+    'nir-lb3-text': `<a target="_blank" href="https://cloud.mail.ru/public/Q69A/ukETc64SM">Лабораторная работа No 3</a>`,
     'aisu-group-text': `<a target="_blank" href="https://vk.me/join/AJQ1d4qEMykdLx0dc0LKWdID">группа в ВК АиСУ (Малютин А.Г.) и студенты</a>`,
+    'it-email-text': 'd.a.elizarov@yandex.ru',
     'it-managment-text': `<a target="_blank" href="https://drive.google.com/drive/folders/1zLYD3l4OX8QFLHkpClWkJax1hvaLgHVr">
 ссылка на гугл диск на два первых семетра: лекции и лаботорные</a>`,
     'ifk-group-text': `<a target="_blank" href="https://vk.com/club222357509">Группа в ВК от преподавателя</a>`,
     'ifk-methodical-text': `В этой группе есть пост с ссылкой на <a target="_blank" href="https://cloud.mail.ru/public/fE6E/ni9UCS45n">лекции, учебники и темы семинаров</a> (облако)`,
     'ifk-audio-text': `<a target="_blank" href="https://cloud.mail.ru/public/hFSk/KcZZfdoaD">
 аудиозапи занятий по предмету, сделанными в прошлые года</a> (облако)`,
-    'ifk-methodical-manual-text': `<a target="_blank" href="/pdf_viewer/?educational_and_methodical_manual_on_LMN">Учебно-методическое пособие по ЛМН.pdf</a> (прямая ссылка)`,
-    'ifk-methodical-lectures-text': `<a target="_blank" href="/pdf_viewer/?textbook_for_lectures">Логика и методология науки. Учебное пособие к лекциям.pdf</a> (прямая ссылка)`,
+    'ifk-methodical-manual-text': `<a target="_blank" href="/pdf_viewer/?educational_and_methodical_manual_on_LMN">Учебно-методическое пособие по ЛМН.pdf (практические)</a> (прямая ссылка)`,
+    'ifk-methodical-lectures-text': `<a target="_blank" href="/pdf_viewer/?textbook_for_lectures">Логика и методология науки. Учебное пособие к лекциям.pdf (лекции)</a> (прямая ссылка)`,
   }
 //   const ENLISH_ZOOM = `
 // <a target="_blank" href="https://us04web.zoom.us/j/79601212044?pwd=OlIdHjmOFaoTb4azGY4KUXucFgtTPy.1">

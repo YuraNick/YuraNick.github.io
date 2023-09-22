@@ -8,7 +8,9 @@
 Идентификатор конференции: 796 0121 2044<br>
 Код доступа: 7V8RHj
       `,
-    'english-homework-text': `нужно выполнить практическую работу до 9-15 октября, следующая встреча в zoom будет примерно после этих чисел<br>
+    'english-homework-text': `нужно выполнить 
+    <a target="_blank" href="https://drive.google.com/drive/folders/1S8Vwrisqrmpk_sLN94yXqSN-a7LkWayE">практическую работу</a>
+    до 15 октября и отправить на reg55@mail.ru, следующая встреча в zoom будет примерно после этого числа<br>
     потом будет еще одно задание, далее в декабре зачет
     `,
     'nir-email-text': `Al.kashtanov@mail.ru`,

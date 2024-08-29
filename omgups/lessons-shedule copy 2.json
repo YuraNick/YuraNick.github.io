@@ -1,0 +1,125 @@
+[
+  {
+    "name": "Иностранный язык (проф. уровень)",
+    "teacher": "Дрофа Светлана Юрьевна",
+    "teacherHref": "https://www.omgups.ru/university/employees/148/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "чт",
+        "type": "ПРК",
+        "room": "3-405",
+        "time": "17:25",
+        "color": "gray"
+      },
+      {
+        "week": "ч",
+        "day": "пт",
+        "type": "ПРК",
+        "room": "3-417",
+        "time": "17:25",
+        "color": "gray"
+      }
+    ]
+  },
+  {
+    "name": "Теория и практика научно-исследовательской работы",
+    "teacher": "Каштанов Алексей Леонидович",
+    "teacherHref": "https://www.omgups.ru/university/employees/368/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "пт",
+        "type": "ЛЕК",
+        "time": "17:25",
+        "room": "1-112",
+        "color": "gray"
+      },
+      {
+        "week": "ч",      
+        "day": "сб",
+        "type": "ЛАБ",
+        "time": "13:55",
+        "room": "1-330",
+        "color": "gray"
+      }
+    ]
+  },
+  {
+    "name": "Методы исследования и моделирования информационных процессов и технологий",
+    "teacher": "Тихонова Наталья Алексеевна",
+    "teacherHref": "https://www.omgups.ru/university/employees/32/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "вт",
+        "type": "ЛЕК и КР",
+        "time": "15:40<br>17:25<br>",
+        "room": "1-112",
+        "color": "gray"
+      },
+      {
+        "week": "ч",   
+        "day": "сб",
+        "type": "ЛАБ",
+        "time": "11:30",
+        "room": "1-329",
+        "color": "gray"
+      }
+    ]
+  },
+  {
+    "name": "Управление IT-проектами",
+    "teacher": "Елизаров Дмитрий Александрович",
+    "teacherHref": "https://www.omgups.ru/university/employees/7/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "пн",
+        "type": "ЛЕК",
+        "room": "1-112",
+        "time": "17:25",
+        "color": "gray"
+      },
+      {
+        "week": "ч",
+        "day": "чт",
+        "type": "ЛАБ",
+        "room": "1-330",
+        "time": "17:25",
+        "color": "gray"
+      }
+    ]
+  },
+  { 
+    "name": "Обеспечение информационной инфраструктуры",
+    "teacher": "Пимшин Дмитрий Александрович",
+    "teacherHref": "#",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "ср",
+        "type": "ЛЕК",
+        "time": "17:25",
+        "room": "1-329",
+        "color": "gray"
+      },
+      {
+        "week": "ч", 
+        "day": "ср",
+        "type": "ЛАБ/КСР",
+        "time": "17:25",
+        "room": "1-329",
+        "color": "gray"
+      },
+      {
+        "week": "ч",
+        "day": "вт",
+        "type": "КР",
+        "time": "17:25",
+        "room": "1-329",
+        "color": "gray"
+      }
+    ]
+  }
+]

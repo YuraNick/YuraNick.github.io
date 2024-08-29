@@ -1,9 +1,29 @@
 document.body.addEventListener("lessons-shedule-loaded", (event) => {
+  getLessonsSheduleChangedTime();
   sheduleTable.fillTable(event.detail);
   document.querySelector('.spinner-border').remove();
 },{
   once: true,
 });
+
+async function getLessonsSheduleChangedTime() {
+  const lessonsSheduleUrl = 'https://api.github.com/repos/YuraNick/YuraNick.github.io/commits?path=omgups/lessons-shedule.json&since=2024-08-01T00:00:00Z';
+  fetch(lessonsSheduleUrl)
+  .then(response => response.json())
+  .then(commits => {
+    const dateString = commits?.[0]?.commit.committer.date;
+    if (!dateString) {
+      return
+    }
+    const date = new Intl.DateTimeFormat('ru', {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }).format(new Date(dateString));
+    const caprion = document.getElementById('lessons-shedule-caption') 
+    caprion.innerText = caprion.innerText + " (изменено " + date + ")";
+  })
+}
 
 const TABLE_ID = 'lessons-shedule';
 const EVEN_NAME = 'Четная';

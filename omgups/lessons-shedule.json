@@ -1,124 +1,140 @@
 [
   {
-    "name": "Иностранный язык (проф. уровень)",
-    "teacher": "Дрофа Светлана Юрьевна",
-    "teacherHref": "https://www.omgups.ru/university/employees/148/",
-    "shedule": [
-      {
-        "week": "нч",
-        "day": "чт",
-        "type": "ПРК",
-        "room": "3-405",
-        "time": "17:25",
-        "color": "gray"
-      },
-      {
-        "week": "ч",
-        "day": "пт",
-        "type": "ПРК",
-        "room": "3-417",
-        "time": "17:25",
-        "color": "gray"
-      }
-    ]
-  },
-  {
-    "name": "Теория и практика научно-исследовательской работы",
+    "name": "Основы инженерии информационных технологий (Зач)",
     "teacher": "Каштанов Алексей Леонидович",
     "teacherHref": "https://www.omgups.ru/university/employees/368/",
     "shedule": [
       {
         "week": "нч",
-        "day": "пт",
+        "day": "вт",
         "type": "ЛЕК",
+        "room": "1-327",
         "time": "17:25",
-        "room": "1-112",
-        "color": "gray"
+        "color": "black"
       },
       {
-        "week": "ч",      
-        "day": "сб",
+        "week": "нч",
+        "day": "ср",
         "type": "ЛАБ",
-        "time": "13:55",
-        "room": "1-330",
-        "color": "gray"
+        "room": "1-467",
+        "time": "17:25",
+        "color": "black"
+      },
+      {
+        "week": "ч",
+        "day": "вт",
+        "type": "ЛЕК",
+        "room": "1-467 (не 1-327?)",
+        "time": "17:25",
+        "color": "black"
+      },
+      {
+        "week": "ч",
+        "day": "ср",
+        "type": "ЛАБ",
+        "room": "1-467",
+        "time": "17:25",
+        "color": "black"
       }
     ]
   },
   {
-    "name": "Методы исследования и моделирования информационных процессов и технологий",
+    "name": "Программирование на языках высокого уровня (Зач)",
+    "teacher": "Александров Александр Владимирович",
+    "teacherHref": "https://www.omgups.ru/university/employees/37/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "пт",
+        "type": "ЛЕК",
+        "time": "17:25",
+        "room": "1-330",
+        "color": "black"
+      },
+      {
+        "week": "ч",      
+        "day": "пт",
+        "type": "ЛАБ",
+        "time": "17:25",
+        "room": "1-325",
+        "color": "black"
+      }
+    ]
+  },
+  { 
+    "name": "Философские проблемы науки и техники (Экз)",
+    "teacher": "Хлебникова Ольга Владимировна",
+    "teacherHref": "https://www.omgups.ru/university/employees/82/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "пн",
+        "type": "ПРК",
+        "time": "17:25",
+        "room": "4-312",
+        "color": "black"
+      },
+      {
+        "week": "ч", 
+        "day": "вт",
+        "type": "ЛЕК",
+        "time": "15-40",
+        "room": "4-315",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "name": "Управление данными и Big data (Экз)",
     "teacher": "Тихонова Наталья Алексеевна",
     "teacherHref": "https://www.omgups.ru/university/employees/32/",
     "shedule": [
       {
         "week": "нч",
-        "day": "вт",
-        "type": "ЛЕК и КР",
-        "time": "15:40<br>17:25<br>",
-        "room": "1-112",
-        "color": "gray"
+        "day": "чт",
+        "type": "ЛЕК",
+        "time": "17:25",
+        "room": "1-330",
+        "color": "black"
       },
       {
         "week": "ч",   
-        "day": "сб",
+        "day": "пн",
+        "type": "ЛЕК",
+        "time": "17:25",
+        "room": "1-330",
+        "color": "black"
+      },
+      {
+        "week": "ч",   
+        "day": "чт",
         "type": "ЛАБ",
-        "time": "11:30",
-        "room": "1-329",
-        "color": "gray"
+        "time": "17:25",
+        "room": "1-467",
+        "color": "black"
       }
     ]
   },
   {
-    "name": "Управление IT-проектами",
-    "teacher": "Елизаров Дмитрий Александрович",
-    "teacherHref": "https://www.omgups.ru/university/employees/7/",
+    "name": "Управление данными и Big data (КП)",
+    "teacher": "Тихонова Наталья Алексеевна",
+    "teacherHref": "https://www.omgups.ru/university/employees/32/",
     "shedule": [
       {
         "week": "нч",
-        "day": "пн",
-        "type": "ЛЕК",
-        "room": "1-112",
-        "time": "17:25",
-        "color": "gray"
+        "day": "чт",
+        "type": "КП",
+        "time": "19:10",
+        "room": "1-330",
+        "color": "black"
       },
       {
-        "week": "ч",
+        "week": "ч",   
         "day": "чт",
         "type": "ЛАБ",
-        "room": "1-330",
-        "time": "17:25",
-        "color": "gray"
-      }
-    ]
-  },
-  { 
-    "name": "Обеспечение информационной инфраструктуры",
-    "teacher": "Пимшин Дмитрий Александрович",
-    "teacherHref": "#",
-    "shedule": [
-      {
-        "week": "нч",
-        "day": "ср",
-        "type": "ЛЕК",
-        "time": "17:25",
-        "room": "1-329",
-        "color": "gray"
-      },
-      {
-        "week": "ч", 
-        "day": "ср",
-        "type": "ЛАБ/КСР",
-        "time": "17:25",
-        "room": "1-329",
-        "color": "gray"
-      },
-      {
-        "week": "ч",
-        "day": "вт",
-        "type": "КР",
-        "time": "17:25",
-        "room": "1-329",
-        "color": "gray"
+        "time": "19:10",
+        "room": "1-467",
+        "color": "black"
       }
     ]
   }

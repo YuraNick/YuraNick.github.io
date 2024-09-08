@@ -14,15 +14,22 @@
     document.body.innerHTML = '<h4>для чтения pdf необходимо перейти по ссылке</h4>';
     return;
   }
-  const BASE = 'https://storage.yandexcloud.net/omgups/';
   const PATHS = {
-    'educational_and_methodical_manual_on_LMN': {
-      path: 'ifk/metodical/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%BE-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%9B%D0%9C%D0%9D.pdf',
-      title: 'Учебно-методическое пособие по ЛМН.pdf',
+    'educational_and_methodical_manual_on_LMN_c1': {
+      path: 'https://storage.yandexcloud.net/omgups/ifk/metodical/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%BE-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%9B%D0%9C%D0%9D.pdf',
+      title: 'Учебно-методическое пособие по ЛМН.pdf (1 курс)',
     },
-    'textbook_for_lectures': {
-      path: 'ifk/metodical/%D0%9B%D0%BE%D0%B3%D0%B8%D0%BA%D0%B0%20%D0%B8%20%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%20%D0%BD%D0%B0%D1%83%D0%BA%D0%B8.%20%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20%D0%BA%20%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%D0%BC.pdf',
-      title: 'Учебное пособие к лекциям.pdf',
+    'textbook_for_lectures_c1': {
+      path: 'https://storage.yandexcloud.net/omgups/ifk/metodical/%D0%9B%D0%BE%D0%B3%D0%B8%D0%BA%D0%B0%20%D0%B8%20%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%20%D0%BD%D0%B0%D1%83%D0%BA%D0%B8.%20%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20%D0%BA%20%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%D0%BC.pdf',
+      title: 'Учебное пособие к лекциям.pdf (1 курс)',
+    },
+    'educational_and_methodical_manual_on_LMN_c3': {
+      path: 'https://storage.yandexcloud.net/omgups/ifk/3course/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%BE-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%A4%D0%9F%D0%9D%D0%A2.pdf',
+      title: 'Учебно-методическое пособие по ФПНТ.pdf (подготовка к семинарам, 3 курс)',
+    },
+    'textbook_for_lectures_c3': {
+      path: 'https://storage.yandexcloud.net/omgups/ifk/3course/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F%20%D0%B8%20%D1%84%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D0%B8%D1%8F%20%D0%BD%D0%B0%D1%83%D0%BA%D0%B8%20%D0%B8%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8.%20%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5.pdf',
+      title: 'История и философия науки и техники. Учебное пособие.pdf (лекции, 3 курс)',
     }
   }
   const {path, title} = PATHS[name] || {};
@@ -31,7 +38,7 @@
     return;
   }
   document.title = title;
-  const uri = BASE+path;
+  const uri = path;
   const pdf = PDFObject.embed(uri, document.body, {
     supportRedirect: true,
     fallbackLink: `Этот браузер не поддерживает чтение pdf, вы можете перейти по <a href="${uri}">прямой ссылке на файл</a>`,

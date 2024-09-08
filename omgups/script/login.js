@@ -28,8 +28,10 @@
     'ifk-methodical-text': `В этой группе есть пост с ссылкой на <a target="_blank" href="https://cloud.mail.ru/public/fE6E/ni9UCS45n">лекции, учебники и темы семинаров</a> (облако)`,
     'ifk-audio-text': `<a target="_blank" href="https://cloud.mail.ru/public/hFSk/KcZZfdoaD">
 аудиозапи занятий по предмету, сделанными в прошлые года</a> (облако)`,
-    'ifk-methodical-manual-text': `<a target="_blank" href="/pdf_viewer/?educational_and_methodical_manual_on_LMN">Учебно-методическое пособие по ЛМН.pdf (практические)</a> (прямая ссылка)`,
-    'ifk-methodical-lectures-text': `<a target="_blank" href="/pdf_viewer/?textbook_for_lectures">Логика и методология науки. Учебное пособие к лекциям.pdf (лекции)</a> (прямая ссылка)`,
+    'ifk-methodical-manual-c1-text': `<a target="_blank" href="/pdf_viewer/?educational_and_methodical_manual_on_LMN_c1">Учебно-методическое пособие по ЛМН.pdf (практические, 1 курс)</a> (прямая ссылка)`,
+    'ifk-methodical-lectures-c1-text': `<a target="_blank" href="/pdf_viewer/?textbook_for_lectures_c1">Логика и методология науки. Учебное пособие к лекциям.pdf (лекции, 1 курс)</a> (прямая ссылка)`,
+    'ifk-methodical-manual-c3-text': `<a target="_blank" href="/pdf_viewer/?educational_and_methodical_manual_on_LMN_c3">Учебно-методическое пособие по ФПНТ.pdf (подготовка к семинарам, 3 курс)</a> (прямая ссылка)`,
+    'ifk-methodical-lectures-c3-text': `<a target="_blank" href="/pdf_viewer/?textbook_for_lectures_c3">История и философия науки и техники. Учебное пособие.pdf (лекции, 3 курс)</a> (прямая ссылка)`,
   }
 //   const ENLISH_ZOOM = `
 // <a target="_blank" href="https://us04web.zoom.us/j/79601212044?pwd=OlIdHjmOFaoTb4azGY4KUXucFgtTPy.1">

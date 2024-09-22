@@ -32,6 +32,8 @@
     'ifk-methodical-lectures-c1-text': `<a target="_blank" href="/pdf_viewer/?textbook_for_lectures_c1">Логика и методология науки. Учебное пособие к лекциям.pdf (лекции, 1 курс)</a> (прямая ссылка)`,
     'ifk-methodical-manual-c3-text': `<a target="_blank" href="/pdf_viewer/?educational_and_methodical_manual_on_LMN_c3">Учебно-методическое пособие по ФПНТ.pdf (подготовка к семинарам, 3 курс)</a> (прямая ссылка)`,
     'ifk-methodical-lectures-c3-text': `<a target="_blank" href="/pdf_viewer/?textbook_for_lectures_c3">История и философия науки и техники. Учебное пособие.pdf (лекции, 3 курс)</a> (прямая ссылка)`,
+    'ifk-methodical-material-c3-text': `<blockquote>Уважаемые магистранты! Размещаю для вас ссылку на необходимые учебные материалы по Философским проблемам науки и техники <a target="_blank" href="https://cloud.mail.ru/public/XXJz/dg56S8afj">https://cloud.mail.ru/public/XXJz/dg56S8afj</a></blockquote>
+    <blockquote>Также можно ознакомиться с аудиозаписями моих занятий по предмету, сделанными в прошлые года (для учащихся, которые не могут посещать занятия лично) по ссылке - <a target="_blank" href="https://cloud.mail.ru/public/BXmf/VQTpyeAon">https://cloud.mail.ru/public/BXmf/VQTpyeAon</a></blockquote>`,
   }
 //   const ENLISH_ZOOM = `
 // <a target="_blank" href="https://us04web.zoom.us/j/79601212044?pwd=OlIdHjmOFaoTb4azGY4KUXucFgtTPy.1">

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цветовая палитра</title>
+</head>
+<body>
+  <h3>Цветовая палитра</h3>
+  <ul id="colors"></ul>
+  
+</body>
+<script>
+// const colorObject = {
+//   color: {r: 0, g: 255, b: 0, opasity: 1}
+// };
+
+const colors = document.getElementById("colors");
+for (let i = 0; i < 90; i++) {
+  // colorHexShiftObject_helper(colorObject);
+  const colorObject = colorHexShiftObject_helper(i);
+  const li = document.createElement("li");
+  li.style.backgroundColor = colorObject.text;
+  li.append(colorObject.text);
+  colors.append(li);
+}
+
+function colorHexShiftObject_helper(index, opacity = 1) {
+  // const opacity = colorObject.color.opacity || 1;
+  // const { r, g, b } = colorHexShift_helper(colorObject.color);
+  const colors = [
+    [128,0,255],
+    [0,0,255],
+    [0,128,255],
+    [0,255,255],
+    // [0,255,128],
+    [0,255,0],
+    [255,255,0],
+    [255,128,0],
+    [255,0,0],
+
+    [123,0,245],
+    [0,0,245],
+    [0,123,245],
+    [0,245,245],
+    //[0,245,123],
+    [0,245,0],
+    [245,245,0],
+    [245,123,0],
+    [245,0,0],
+
+    [108,0,214],
+    [0,0,214],
+    [0,108,214],
+    [0,214,214],
+    //[0,214,108],
+    [0,214,0],
+    [214,214,0],
+    [214,108,0],
+    [214,0,0],
+
+    [82,0,163],
+    [0,0,163],
+    [0,82,163],
+    [0,163,163],
+    //[0,163,82],
+    [0,163,0],
+    [163,163,0],
+    [163,82,0],
+    [163,0,0],
+
+    [46,0,92],
+    [0,0,92],
+    [0,46,92],
+    [0,92,92],
+    //[0,92,46],
+    [0,92,0],
+    [92,92,0],
+    [92,46,0],
+    [92,0,0],
+  ];
+
+  const [r, g, b] = colors[index % colors.length];
+  // colorObject.text = `rgba(${r},${g},${b},${opacity})`;
+  // colorObject.color = { r, g, b, opasity };
+  return {
+    text: `rgba(${r},${g},${b},${opacity})`,
+    color: { r, g, b, opacity }
+  };
+
+  // rgb(128,0,255)
+  // rgb(0,0,255)
+  // rgb(0,128,255)
+  // rgb(0,255,255)
+  // rgb(0,255,128)
+  // rgb(0,255,0)
+  // rgb(255,255,0)
+  // rgb(255,128,0)
+  // rgb(255,0,0)
+
+  // rgb(123,0,245)
+  // rgb(0,0,245)
+  // rgb(0,123,245)
+  // rgb(0,245,245)
+  // rgb(0,245,123)
+  // rgb(0,245,0)
+  // rgb(245,245,0)
+  // rgb(245,123,0)
+  // rgb(245,0,0)
+
+  // rgb(108,0,214)
+  // rgb(0,0,214)
+  // rgb(0,108,214)
+  // rgb(0,214,214)
+  // rgb(0,214,108)
+  // rgb(0,214,0)
+  // rgb(214,214,0)
+  // rgb(214,108,0)
+  // rgb(214,0,0)
+
+  // rgb(82,0,163)
+  // rgb(0,0,163)
+  // rgb(0,82,163)
+  // rgb(0,163,163)
+  // rgb(0,163,82)
+  // rgb(0,163,0)
+  // rgb(163,163,0)
+  // rgb(163,82,0)
+  // rgb(163,0,0)
+
+  // rgb(46,0,92)
+  // rgb(0,0,92)
+  // rgb(0,46,92)
+  // rgb(0,92,92)
+  // rgb(0,92,46)
+  // rgb(0,92,0)
+  // rgb(92,92,0)
+  // rgb(92,46,0)
+  // rgb(92,0,0)
+
+}
+
+// function colorHexShift_helper(rgbColor) {
+//   let { r = 0, g = 0, b = 0 } = rgbColor;
+//   const MAX = 255;
+
+//   b += 120;
+
+//   if (b > MAX) {
+//     const overflow = b - MAX;
+//     b -= MAX;
+//     g += overflow;
+//   }
+
+//   if (g > MAX) {
+//     const overflow = g - MAX;
+//     g -= MAX;
+//     r += overflow;
+//   }
+
+//   if (r > MAX) {
+//     r -= MAX;
+//   }
+
+//   return { r, g, b };
+// }
+</script>
+</html>

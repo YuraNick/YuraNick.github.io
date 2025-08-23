@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title> Playing Around With Leaflet JS </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href=
+"https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity=
+"sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity=
+"sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+</head>
+
+<body>
+	<div id="map" style="width:100%;height:100%;"> </div>
+</body>
+
+</html>
+
+
+<script>
+// https://www.geeksforgeeks.org/javascript/leafletjs-interacting-with-maps-using-javascript/
+function getDistanceFromMeters(lat = 0, lon = 0, offsetLat, offsetLon) {
+  //Earth’s radius, sphere
+  const R = 6378137;
+  const Pi = Math.PI;
+  const Cos = Math.cos;
+
+  //Coordinate offsets in radians
+  const dLat = offsetLat / R;
+  const dLon = offsetLon / (R * Cos((Pi * lat) / 180));
+
+  //OffsetPosition, decimal degrees
+  const latO = (dLat * 180) / Pi;
+  const lonO = (dLon * 180) / Pi;
+
+  return { lat: latO, lng: lonO };
+}
+
+function getTileObject (id) {
+	return L.tileLayer(
+	  'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
+	  {
+		attribution: '',
+		// 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>',
+		tileSize: 512,
+		maxZoom: 18,
+		zoomOffset: -1,
+		id,
+		accessToken:
+		  'pk.eyJ1IjoiaXVyaWktNTA1IiwiYSI6ImNqemlldHRqbzA4NjYzbW84bTQ0OXMzNXkifQ.tPUaHbgVZ6vCSpuxk3IUJA',
+	  },
+	);
+}
+
+function addPolygon(map, startLat, startLon, lat, lon, i) {
+	// Creating latlng object
+	var latlngs = [
+	   [startLat, startLon],
+	   [lat, startLon],
+	   [lat, lon],
+	   [startLat, lon],
+	];
+
+	// Creating a polygon
+	var polygon = L.polygon(latlngs, {color: i%2 ? 'red' : 'blue'});
+
+	// Adding to polygon to map
+	polygon.addTo(map);
+}
+
+const shema = getTileObject('mapbox/streets-v11');
+const map = L.map('map', {
+  layers: [shema],
+  attributionControl: false,
+}).setView([61.262, 73.377], 13);
+
+const layerGroup = L.layerGroup();
+
+const startLat = 61.262;
+const startLon = 73.377;
+let lat1 = startLat;
+let lon1 = startLon;
+let lat2 = startLat + getDistanceFromMeters(startLat, startLon, 1000, 0)['lat'];
+let lon2 = startLon + getDistanceFromMeters(startLat, startLon, 0, 1000)['lng'];
+
+console.log(lat2, lon2)
+
+let i = 0, count = 0;
+for (let lon = startLon; lon < 80; lon2 += getDistanceFromMeters(lat1, lon1, 0, 1000)['lng']) {
+	for (let lat = startLat; lat < 70; lat2 += getDistanceFromMeters(lat1, lon1, 1000, 0)['lat']) {
+		// наверх
+		addPolygon(layerGroup, lat, lon, lat2, lon2, i++)
+		lat = lat2
+		count++
+	}
+	lon = lon2
+	lat2 = startLat + getDistanceFromMeters(startLat, startLon, 1000, 0)['lat'];
+}
+console.log('count', count);
+
+layerGroup.addTo(map);
+
+</script>
+
+

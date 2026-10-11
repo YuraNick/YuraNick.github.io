@@ -1,140 +1,103 @@
 [
   {
-    "name": "Основы инженерии информационных технологий (Зач)",
-    "teacher": "Каштанов Алексей Леонидович",
-    "teacherHref": "https://www.omgups.ru/university/employees/368/",
+    "name": "ИФН",
+    "teacher": "Руди Амина Шамильевна",
+    "teacherHref": "https://www.omgups.ru/university/employees/79/",
     "shedule": [
       {
         "week": "нч",
-        "day": "вт",
-        "type": "ЛЕК",
-        "room": "1-327",
-        "time": "17:25",
-        "color": "gray"
+        "day": "ср",
+        "type": "Лекция 1, 2 группа",
+        "room": "4-315",
+        "time": "08:00",
+        "color": "black"
       },
       {
         "week": "нч",
         "day": "ср",
-        "type": "ЛАБ",
-        "room": "1-467",
-        "time": "17:25",
-        "color": "gray"
+        "type": "Практика 1 группа",
+        "room": "4-313",
+        "time": "09:45",
+        "color": "black"
+      },
+      {
+        "week": "нч",
+        "day": "чт",
+        "type": "Практика 2 группа",
+        "room": "4-313",
+        "time": "08:00",
+        "color": "black"
       },
       {
         "week": "ч",
-        "day": "вт",
-        "type": "ЛЕК",
-        "room": "1-467 (не 1-327?)",
-        "time": "17:25",
-        "color": "gray"
+        "day": "чт",
+        "type": "Практика 1 группа",
+        "room": "4-313",
+        "time": "08:00",
+        "color": "black"
       },
       {
         "week": "ч",
-        "day": "ср",
-        "type": "ЛАБ",
-        "room": "1-467",
-        "time": "17:25",
-        "color": "gray"
+        "day": "пт",
+        "type": "Лекция 1, 2 группа",
+        "room": "4-313",
+        "time": "08:00",
+        "color": "black"
+      },
+      {
+        "week": "ч",
+        "day": "чт",
+        "type": "Практика 2 группа",
+        "room": "4-313",
+        "time": "11:30",
+        "color": "black"
       }
     ]
   },
   {
-    "name": "Программирование на языках высокого уровня (Зач)",
-    "teacher": "Александров Александр Владимирович",
-    "teacherHref": "https://www.omgups.ru/university/employees/37/",
+    "name": "Английский язык",
+    "teacher": "Жбиковская Оксана Алексеевна",
+    "teacherHref": "https://www.omgups.ru/university/employees/149/",
     "shedule": [
       {
         "week": "нч",
         "day": "пт",
-        "type": "ЛЕК",
-        "time": "17:25",
-        "room": "1-330",
-        "color": "gray"
+        "type": "Практика 1 группа",
+        "time": "09:45",
+        "room": "3-416",
+        "color": "black"
+      },
+      {
+        "week": "нч",      
+        "day": "пт",
+        "type": "Практика 2 группа",
+        "time": "11:30",
+        "room": "3-416",
+        "color": "black"
+      },
+      {
+        "week": "ч",      
+        "day": "пн",
+        "type": "Лекция 1,2 группа",
+        "time": "13:55",
+        "room": "3-401",
+        "color": "black"
       },
       {
         "week": "ч",      
         "day": "пт",
-        "type": "ЛАБ",
-        "time": "17:25",
-        "room": "1-325",
-        "color": "gray"
-      }
-    ]
-  },
-  { 
-    "name": "Философские проблемы науки и техники (Экз)",
-    "teacher": "Хлебникова Ольга Владимировна",
-    "teacherHref": "https://www.omgups.ru/university/employees/82/",
-    "shedule": [
-      {
-        "week": "нч",
-        "day": "пн",
-        "type": "ПРК",
-        "time": "17:25",
-        "room": "4-312",
+        "type": "Практика 1 группа",
+        "time": "09:45",
+        "room": "3-510",
         "color": "black"
       },
       {
-        "week": "ч", 
-        "day": "вт",
-        "type": "ЛЕК",
-        "time": "15-40",
-        "room": "4-315",
+        "week": "ч",      
+        "day": "пт",
+        "type": "Практика 2 группа",
+        "time": "11:30",
+        "room": "3-510",
         "color": "black"
-      }
-    ]
-  },
-  {
-    "name": "Управление данными и Big data (Экз)",
-    "teacher": "Тихонова Наталья Алексеевна",
-    "teacherHref": "https://www.omgups.ru/university/employees/32/",
-    "shedule": [
-      {
-        "week": "нч",
-        "day": "чт",
-        "type": "ЛЕК",
-        "time": "17:25",
-        "room": "1-330",
-        "color": "gray"
-      },
-      {
-        "week": "ч",   
-        "day": "пн",
-        "type": "ЛЕК",
-        "time": "17:25",
-        "room": "1-330",
-        "color": "gray"
-      },
-      {
-        "week": "ч",   
-        "day": "чт",
-        "type": "ЛАБ",
-        "time": "17:25",
-        "room": "1-467",
-        "color": "gray"
-      }
-    ]
-  },
-  {
-    "name": "Управление данными и Big data (КП)",
-    "teacher": "Тихонова Наталья Алексеевна",
-    "teacherHref": "https://www.omgups.ru/university/employees/32/",
-    "shedule": [
-      {
-        "week": "нч",
-        "day": "чт",
-        "type": "КП",
-        "time": "19:10",
-        "room": "1-330",
-        "color": "gray"
-      },
-      {
-        "week": "ч",   
-        "day": "чт",
-        "type": "ЛАБ",
-        "time": "19:10",
-        "room": "1-467",
-        "color": "gray"
       }
     ]
   }

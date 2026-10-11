@@ -47,6 +47,8 @@ const sheduleTable = {
   fillTable(data) {
     this.currentEvenWeek = this.getEvenWeekProperty();
     const table = document.getElementById(TABLE_ID);
+    table.style.width = 'auto';
+    table.style.margin = '0 auto';
     this.columns = this.getColumns();
     const headerColumns = this.getHeader();
     [EVEN_NAME, UNEVEN_NAME].forEach((week, index) => {
@@ -102,7 +104,7 @@ const sheduleTable = {
     return cols.map(col => `<td class="align-middle${bgClass}">${col}</td>`);
   },
   getCell(cell) {
-    let htmlCell = `${cell.time} ${cell.type}<br><span class="text-nowrap">${cell.room}</span>`;
+    let htmlCell = `<strong>${cell.time}</strong> ${cell.type}<br><span class="text-nowrap">${cell.room}</span>`;
     if (cell.color) {
       htmlCell = `<span style="color:${cell.color}">${htmlCell}</span>`;
     }
@@ -130,18 +132,35 @@ const sheduleTable = {
     return 1;
   },
   getEvenWeekProperty() {
-    const begin = new Date("2023-08-28"); // 28 вгуста 2023 - первая (нечетная) неделя началась с 4 сентября
-    const time = new Date();
-    // сколько полных недель прошло
+    const knownMonday = new Date("2026-09-28"); // 28 сентября 2026 - первая (нечетная) неделя началась с 28 сентября
+    knownMonday.setHours(0, 0, 0, 0);
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Приводим "сегодня" к понедельнику текущей недели
+    const dayOfWeek = (today.getDay() + 6) % 7; // 0 = ПН, 6 = ВС
+    const currentMonday = new Date(today);
+    currentMonday.setDate(today.getDate() - dayOfWeek);
+
     const weekMs = this.getWeeksMsByDays(7);
-    const weeks = Math.floor((time.getTime() - begin.getTime() - (begin.getTimezoneOffset() *60*1000)) / weekMs);
-    const isEven = Boolean(weeks % 2);
+    const weeks = Math.round((currentMonday - knownMonday) / weekMs);
+
+    // knownMonday — нечётная (weeks = 0)
+    // weeks = 1 → чётная, weeks = 2 → нечётная, ...
+    const isEven = weeks % 2 !== 0;
+
+    const weekStart = currentMonday;
+    const weekEnd = new Date(weekStart.getTime() + weekMs - this.getWeeksMsByDays(1));
+    const nextStart = new Date(weekStart.getTime() + weekMs);
+    const nextEnd = new Date(nextStart.getTime() + weekMs - this.getWeeksMsByDays(1));
+
     return {
       name: isEven ? EVEN_NAME : UNEVEN_NAME,
-      curWeekFrom: this.getTextDate(new Date(begin.getTime() + (weeks * weekMs))),
-      curWeekTo: this.getTextDate(new Date(begin.getTime() + ((weeks + 1) * weekMs) - this.getWeeksMsByDays(1))),
-      nextWeekFrom: this.getTextDate(new Date(begin.getTime() + ((weeks + 1) * weekMs))),
-      nextWeekTo: this.getTextDate(new Date(begin.getTime() + ((weeks + 2) * weekMs) - this.getWeeksMsByDays(1))),
+      curWeekFrom: this.getTextDate(weekStart),
+      curWeekTo: this.getTextDate(weekEnd),
+      nextWeekFrom: this.getTextDate(nextStart),
+      nextWeekTo: this.getTextDate(nextEnd),
     };
   },
   getTextDate(date) {

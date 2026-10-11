@@ -1,0 +1,141 @@
+[
+  {
+    "name": "Основы инженерии информационных технологий (Зач)",
+    "teacher": "Каштанов Алексей Леонидович",
+    "teacherHref": "https://www.omgups.ru/university/employees/368/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "вт",
+        "type": "ЛЕК",
+        "room": "1-327",
+        "time": "17:25",
+        "color": "gray"
+      },
+      {
+        "week": "нч",
+        "day": "ср",
+        "type": "ЛАБ",
+        "room": "1-467",
+        "time": "17:25",
+        "color": "gray"
+      },
+      {
+        "week": "ч",
+        "day": "вт",
+        "type": "ЛЕК",
+        "room": "1-467 (не 1-327?)",
+        "time": "17:25",
+        "color": "gray"
+      },
+      {
+        "week": "ч",
+        "day": "ср",
+        "type": "ЛАБ",
+        "room": "1-467",
+        "time": "17:25",
+        "color": "gray"
+      }
+    ]
+  },
+  {
+    "name": "Программирование на языках высокого уровня (Зач)",
+    "teacher": "Александров Александр Владимирович",
+    "teacherHref": "https://www.omgups.ru/university/employees/37/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "пт",
+        "type": "ЛЕК",
+        "time": "17:25",
+        "room": "1-330",
+        "color": "gray"
+      },
+      {
+        "week": "ч",      
+        "day": "пт",
+        "type": "ЛАБ",
+        "time": "17:25",
+        "room": "1-325",
+        "color": "gray"
+      }
+    ]
+  },
+  { 
+    "name": "Философские проблемы науки и техники (Экз)",
+    "teacher": "Хлебникова Ольга Владимировна",
+    "teacherHref": "https://www.omgups.ru/university/employees/82/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "пн",
+        "type": "ПРК",
+        "time": "17:25",
+        "room": "4-312",
+        "color": "black"
+      },
+      {
+        "week": "ч", 
+        "day": "вт",
+        "type": "ЛЕК",
+        "time": "15-40",
+        "room": "4-315",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "name": "Управление данными и Big data (Экз)",
+    "teacher": "Тихонова Наталья Алексеевна",
+    "teacherHref": "https://www.omgups.ru/university/employees/32/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "чт",
+        "type": "ЛЕК",
+        "time": "17:25",
+        "room": "1-330",
+        "color": "gray"
+      },
+      {
+        "week": "ч",   
+        "day": "пн",
+        "type": "ЛЕК",
+        "time": "17:25",
+        "room": "1-330",
+        "color": "gray"
+      },
+      {
+        "week": "ч",   
+        "day": "чт",
+        "type": "ЛАБ",
+        "time": "17:25",
+        "room": "1-467",
+        "color": "gray"
+      }
+    ]
+  },
+  {
+    "name": "Управление данными и Big data (КП)",
+    "teacher": "Тихонова Наталья Алексеевна",
+    "teacherHref": "https://www.omgups.ru/university/employees/32/",
+    "shedule": [
+      {
+        "week": "нч",
+        "day": "чт",
+        "type": "КП",
+        "time": "19:10",
+        "room": "1-330",
+        "color": "gray"
+      },
+      {
+        "week": "ч",   
+        "day": "чт",
+        "type": "ЛАБ",
+        "time": "19:10",
+        "room": "1-467",
+        "color": "gray"
+      }
+    ]
+  }
+]
